@@ -1,13 +1,13 @@
 const express = require('express');
-// const middlewares = require('./middlewares');
-// const routeHandler = require('./routes');
+const middlewares = require('./middlewares');
+const routeHandler = require('./routes');
 
 const app = express();
 // attaches all middlewares to the app
-// middlewares(app);
+middlewares(app);
 
 // attaches all routes to the app
-// app.use('/', routeHandler());
+app.use('/', routeHandler());
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
